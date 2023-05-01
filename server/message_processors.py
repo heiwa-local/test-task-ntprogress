@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     import fastapi
 
-    from server.models import client_messages
-    from server.ntpro_server import NTProServer
+    from models import client_messages
+    from ntpro_server import NTProServer
 
 
 async def subscribe_market_data_processor(
@@ -15,7 +15,7 @@ async def subscribe_market_data_processor(
         websocket: fastapi.WebSocket,
         message: client_messages.SubscribeMarketData,
 ):
-    from server.models import server_messages
+    from models import server_messages
 
     # TODO ...
 
@@ -27,7 +27,7 @@ async def unsubscribe_market_data_processor(
         websocket: fastapi.WebSocket,
         message: client_messages.UnsubscribeMarketData,
 ):
-    from server.models import server_messages
+    from models import server_messages
 
     # TODO ...
 
@@ -39,7 +39,7 @@ async def place_order_processor(
         websocket: fastapi.WebSocket,
         message: client_messages.PlaceOrder,
 ):
-    from server.models import server_messages
+    from models import server_messages
 
     # TODO ...
 
